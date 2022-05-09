@@ -1,0 +1,306 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# 创建的文件:09.05.2022 17:32:23
+
+newmtl Natures
+	Ns 32.6421
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.6400 0.6400 0.6400
+	Ks 0.2500 0.2500 0.2500
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Natures.png
+	map_Kd maps\Natures.png
+
+newmtl Road
+	Ns 32.6421
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.6400 0.6400 0.6400
+	Ks 0.2500 0.2500 0.2500
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Road.png
+	map_Kd maps\Road.png
+
+newmtl Props_Props_01
+	Ns 32.6421
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.6400 0.6400 0.6400
+	Ks 0.2500 0.2500 0.2500
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Props_Props_01.png
+	map_Kd maps\Props_Props_01.png
+
+newmtl Props_TrafficProps
+	Ns 32.6421
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.6400 0.6400 0.6400
+	Ks 0.2500 0.2500 0.2500
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Props_TrafficProps.png
+	map_Kd maps\Props_TrafficProps.png
+
+newmtl Props_RoofProps
+	Ns 32.6421
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.6400 0.6400 0.6400
+	Ks 0.2500 0.2500 0.2500
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Props_RoofProps.png
+	map_Kd maps\Props_RoofProps.png
+
+newmtl Vehicle_Car_color01
+	Ns 32.6421
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.6400 0.6400 0.6400
+	Ks 0.2500 0.2500 0.2500
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Car_1.png
+	map_Kd maps\Car_1.png
+
+newmtl Vehicle_SUV_color02
+	Ns 32.6421
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.6400 0.6400 0.6400
+	Ks 0.2500 0.2500 0.2500
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\SUV_2.png
+	map_Kd maps\SUV_2.png
+
+newmtl Vehicle_Container_color02
+	Ns 32.6421
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.6400 0.6400 0.6400
+	Ks 0.2500 0.2500 0.2500
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Container_2.png
+	map_Kd maps\Container_2.png
+
+newmtl Vehicle_Pick_up_Truck_color01
+	Ns 32.6421
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.6400 0.6400 0.6400
+	Ks 0.2500 0.2500 0.2500
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Pick up Truck_1.png
+	map_Kd maps\Pick up Truck_1.png
+
+newmtl Building_House_02_color02
+	Ns 32.6421
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.6400 0.6400 0.6400
+	Ks 0.2500 0.2500 0.2500
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Building_House_02_color02.png
+	map_Kd maps\Building_House_02_color02.png
+
+newmtl Building_House_04_color01
+	Ns 32.6421
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.6400 0.6400 0.6400
+	Ks 0.2500 0.2500 0.2500
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Building_House_04_color01.png
+	map_Kd maps\Building_House_04_color01.png
+
+newmtl Building_House_01_color03
+	Ns 32.6421
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.6400 0.6400 0.6400
+	Ks 0.2500 0.2500 0.2500
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Building_House_01_color03.png
+	map_Kd maps\Building_House_01_color03.png
+
+newmtl Vehicle_SUV_color03
+	Ns 32.6421
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.6400 0.6400 0.6400
+	Ks 0.2500 0.2500 0.2500
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\SUV_3.png
+	map_Kd maps\SUV_3.png
+
+newmtl Vehicle_Car_color02
+	Ns 32.6421
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.6400 0.6400 0.6400
+	Ks 0.2500 0.2500 0.2500
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Car_2.png
+	map_Kd maps\Car_2.png
+
+newmtl Building_House_01_color02
+	Ns 32.6421
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.6400 0.6400 0.6400
+	Ks 0.2500 0.2500 0.2500
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Building_House_01_color02.png
+	map_Kd maps\Building_House_01_color02.png
+
+newmtl Building_House_04_color03
+	Ns 32.6421
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.6400 0.6400 0.6400
+	Ks 0.2500 0.2500 0.2500
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Building_House_04_color03.png
+	map_Kd maps\Building_House_04_color03.png
+
+newmtl Building_House_02_color01
+	Ns 32.6421
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.6400 0.6400 0.6400
+	Ks 0.2500 0.2500 0.2500
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Building_House_02_color01.png
+	map_Kd maps\Building_House_02_color01.png
+
+newmtl Vehicle_SUV_color01
+	Ns 32.6421
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.6400 0.6400 0.6400
+	Ks 0.2500 0.2500 0.2500
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\SUV_1.png
+	map_Kd maps\SUV_1.png
+
+newmtl Building_House_02_color03
+	Ns 32.6421
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.6400 0.6400 0.6400
+	Ks 0.2500 0.2500 0.2500
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Building_House_02_color03.png
+	map_Kd maps\Building_House_02_color03.png
+
+newmtl Building_House_01_color01
+	Ns 32.6421
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.6400 0.6400 0.6400
+	Ks 0.2500 0.2500 0.2500
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Building_House_01_color01.png
+	map_Kd maps\Building_House_01_color01.png
+
+newmtl Vehicle_Taxi
+	Ns 32.6421
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.6400 0.6400 0.6400
+	Ks 0.2500 0.2500 0.2500
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Taxi.png
+	map_Kd maps\Taxi.png
+
+newmtl wire_255255255
+	Ns 32
+	d 1
+	Tr 0
+	Tf 1 1 1
+	illum 2
+	Ka 1.0000 1.0000 1.0000
+	Kd 1.0000 1.0000 1.0000
+	Ks 0.3500 0.3500 0.3500
