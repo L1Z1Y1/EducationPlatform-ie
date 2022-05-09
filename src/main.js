@@ -7,6 +7,13 @@ import VueRouter from 'vue-router';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import VueCoreVideoPlayer from 'vue-core-video-player'
+import axios from 'axios'
+import qs from 'qs';
+
+Vue.prototype.$qs = qs
+Vue.prototype.$axios = axios
+axios.defaults.baseURL = '/api' //每次发送的请求都会带一个/api的前缀
+Vue.config.productionTip = false
 
 Vue.use(VueCoreVideoPlayer)
 Vue.use(VueRouter);//引入router

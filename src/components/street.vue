@@ -1,8 +1,22 @@
 <template>
   <div>
-    <canvas class="s" ref="ThreeJS">
-    </canvas>
+    <el-dialog
+      title="提示"
+      :visible.sync="dialogVisible"
+      width="30%"
+      :before-close="handleClose">
+      <span>这是一段信息</span>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="dialogVisible = false">取 消</el-button>
+        <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
+      </span>
+    </el-dialog>
+    <canvas class="s" ref="ThreeJS"></canvas>
+    
+    
   </div>
+
+
 </template>
 
 <script>
@@ -28,6 +42,8 @@ export default {
       pickedObject: null,
       pickedObjectSavedColor: 0,
       },
+      //登录卡片是否显示
+      dialogVisible: false
     };
   },
   created(){
@@ -184,14 +200,41 @@ export default {
           console.log('mtl error',err);
       } );
     },
+
+    //登陆卡片关闭
+    handleClose(done) {
+      this.$confirm('确认关闭？')
+        .then(_ => {
+          done();
+        })
+        .catch(_ => {});
+    },
     clickPickPosition(){
-      this.pickEvents(this.events.pickPosition, this.scene, this.camera, obj=>{
-        console.log(`您选中了--${obj.name}`);
-        //点击进入threejs工作室
-        if(obj.name=='Building_House_02_color03_002'){
-          this.HandleBackOffice();
-        }
+      //登入提示
+      this.dialogVisible = true;
+
+      console.log(this.dialogVisible)
+      let data = { 'username': 'eee', 'password': '123123'};
+      this.$axios({
+        method: 'POST',
+        headers: { 'content-type': 'application/x-www-form-urlencoded' },
+        data: this.$qs.stringify(data),
+        url:'/api/login',
+      }).then(function (res) {
+        console.log(res);
       })
+      .catch(function (error) {
+        console.log(error);
+      });
+
+
+      // this.pickEvents(this.events.pickPosition, this.scene, this.camera, obj=>{
+      //   console.log(`您选中了--${obj.name}`);
+      //   //点击进入threejs工作室
+      //   if(obj.name=='Building_House_02_color03_002'){
+      //     this.HandleBackOffice();
+      //   }
+      // })
     },
     // 获取当前焦点坐标
     setPickPosition(event){
@@ -233,3 +276,26 @@ export default {
   }
 };    
 </script>
+
+<style>
+  .text {
+    font-size: 14px;
+  }
+
+  .item {
+    margin-bottom: 18px;
+  }
+
+  .clearfix:before,
+  .clearfix:after {
+    display: table;
+    content: "";
+  }
+  .clearfix:after {
+    clear: both
+  }
+
+  .box-card {
+    width: 480px;
+  }
+</style>
