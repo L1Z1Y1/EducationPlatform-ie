@@ -1,10 +1,9 @@
 <template>
     <el-dialog class="outbox" :title="title" :visible.sync="open" width="1000px" :close-on-click-modal="false">
-     <div class="leftline"></div>
-     <div class="rightline">
-       <div class="right-top"></div>
-       <div class="right-bottom"></div>
-     </div>
+      <el-container>
+        <el-aside width="200px">Aside</el-aside>
+        <el-main>Main</el-main>
+      </el-container>
     </el-dialog>
 </template>
 
@@ -25,7 +24,7 @@
                 this.open = true;
             },
         }
-    };
+    }
 </script>
 <style scoped>
 .el-dialog__body{
