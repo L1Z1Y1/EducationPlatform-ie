@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-dialog :title="title" :visible.sync="open" width="900px" :close-on-click-modal="false">
+    <el-dialog :title="title" :visible.sync="open" width="900px" :close-on-click-modal="false" :before-close="handleClose">
      88888
     </el-dialog>
   </div>
@@ -19,9 +19,13 @@
         },
         methods: {
         	// 窗口初始化方法
-            init(data) {
+            init() {
                 this.open = true;
             },
+            handleClose(done) {
+              this.$emit('parentFunc', false);
+              done();
+            }
         }
     };
 </script>

@@ -8,8 +8,8 @@
       </div>
     <canvas class="c" ref="ThreeJS">
     </canvas>
-    <videoplayer title="学习视频" v-if="openVideoDialog" ref="videoplayer"/>
-    <reader title="文本阅读" v-if="openReaderDialog" ref="reader"/>
+    <videoplayer title="学习视频" v-if="openVideoDialog" ref="videoplayer" @parentFunc="closeVideoDialog"/>
+    <reader title="文本阅读" v-if="openReaderDialog" ref="reader" @parentFunc="closeReaderDialog"/>
   </div>
 </template>
 
@@ -248,7 +248,8 @@ export default {
         }
         //点击书架,打开文本阅读界面
         if(obj.name=='SO_Shelf_02' || obj.name=='SO_Bookbox_001'|| obj.name=='SO_Bookbox_002'){
-          this.HandleReaderDialog('88888');
+          if(this.openVideoDialog !=true){
+          this.HandleReaderDialog('88888');}
         }
         else{
           for(let i=1;i<=17;i++){
@@ -299,21 +300,30 @@ export default {
     },
     //视频播放界面
     HandleVideoDialog(data){
+      if(this.openReaderDialog==false){
       this.openVideoDialog=true;
       this.$nextTick(()=>{
-        //这里的dialog与上面dialog-component组件里面的ref属性值是一致的
-        //init调用的是dialog-component组件里面的init方法
-        //data是传递给弹窗页面的值
-        this.$refs.videoplayer.init(data);
+        this.$refs.videoplayer.init();
       })
+      }
+    },
+    //关闭了视频播放界面
+    closeVideoDialog(data){
+      this.openVideoDialog=data;
     },
     //文本阅读界面
     HandleReaderDialog(data){
+      if(this.openVideoDialog==false){
       this.openReaderDialog=true;
       this.$nextTick(()=>{
-        this.$refs.reader.init(data);
+        this.$refs.reader.init();
       })
+      }
     },
+    //关闭了文本阅读界面
+    closeReaderDialog(data) {
+      this.openReaderDialog=data;
+	  },
     //个人中心界面
     HandlepersonDialog(){
 
@@ -329,8 +339,8 @@ body {
 .selection{
     position: absolute;
     width:500px;
-    left: 1130px;
-    top:60px;
+    left: 1200px;
+    top:30px;
 }
 .selection .select_button{
     width: 40px;
