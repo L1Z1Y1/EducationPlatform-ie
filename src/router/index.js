@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import office from '@/components/office'
 import videoplayer from '@/components/videoplayer'
-import reader from '@/components/reader'
+import reader from '@/components/ebook'
 import street from '@/components/street'
 import login from '@/user/login'
 

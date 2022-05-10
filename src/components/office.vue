@@ -10,6 +10,7 @@
     </canvas>
     <videoplayer title="学习视频" v-if="openVideoDialog" ref="videoplayer"/>
     <reader title="文本阅读" v-if="openReaderDialog" ref="reader"/>
+    <person title="个人中心" v-if="openPersonDialog" ref="person"/>
   </div>
 </template>
 
@@ -18,13 +19,15 @@ import * as THREE from "three";
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader';
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import videoplayer from "./videoplayer";
-import reader from "./reader";
+import reader from "./ebook";
+import person from './person.vue';
 
 export default {
   components:{
     //注册组件
     videoplayer,
-    reader
+    reader,
+    person
   },
   data() {
     return {
@@ -44,6 +47,7 @@ export default {
       },
       openVideoDialog:false,
       openReaderDialog:false,
+      openPersonDialog:false,
     };
   },
   created(){
@@ -315,17 +319,17 @@ export default {
       })
     },
     //个人中心界面
-    HandlepersonDialog(){
-
+    HandlepersonDialog(data){
+      this.openPersonDialog=true;
+      this.$nextTick(()=>{
+        this.$refs.person.init(data);
+      })
     },
   }
 };    
 </script>
 
 <style>
-body {
-  margin: 0;
-}
 .selection{
     position: absolute;
     width:500px;
